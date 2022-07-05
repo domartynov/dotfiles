@@ -5,5 +5,6 @@ if status is-interactive
     set fzf_fd_opts --hidden --exclude=.git
 end
 
-# test
+set -gx EDITOR nvim
+
 
