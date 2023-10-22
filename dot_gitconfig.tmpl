@@ -1,0 +1,27 @@
+[user]
+	email = {{ .email | quote }}
+	name = Dmitry Martynov
+
+[core]
+	pager = delta
+	autocrlf = input
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true # use n/N to move between diff sections
+	line-numbers = true
+#	 hyperlinks = true
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+
+[init]
+	defaultBranch = main
+[alias]
+	brdiff = !git diff $(git merge-base main HEAD) HEAD
